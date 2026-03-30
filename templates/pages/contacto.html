@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto | Administración 360 Spa{% endblock %}
+
+{% block content %}
+<div class="container container-contacto" style="padding: 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+    
+    <div>
+        <h1 style="color: var(--primary-dark); margin-bottom: 20px;">Hablemos</h1>
+        <p style="margin-bottom: 20px;">¿Necesitas mejorar la gestión de tu comunidad? Contáctanos y solicita una evaluación sin costo.</p>
+        
+        <ul style="list-style: none; margin-bottom: 30px; line-height: 2;">
+            <li><strong>Email:</strong> proyectosys29@gmail.com</li>
+            <li><strong>Teléfono:</strong> +56 9 75357329</li>
+            <li><strong>Horario:</strong> Lunes a Viernes, 09:00 a 18:00 hrs.</li>
+        </ul>
+    </div>
+
+    <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div style="padding: 15px; margin-bottom: 20px; border-radius: 4px; border: 1px solid transparent; 
+                    {% if message.tags == 'success' %}background-color: #d4edda; color: #155724; border-color: #c3e6cb;
+                    {% elif message.tags == 'error' %}background-color: #f8d7da; color: #721c24; border-color: #f5c6cb;{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form action="" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            {% csrf_token %}
+            
+            <div>
+                <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+            </div>
+            
+            <div>
+                <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Correo Electrónico</label>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+            </div>
+
+            <div>
+                <label for="mensaje" style="display: block; margin-bottom: 5px; font-weight: bold;">Mensaje o requerimiento</label>
+                <textarea id="mensaje" name="mensaje" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="border: none; cursor: pointer; font-size: 1rem;">Enviar Mensaje</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Nuestras Comunidades | Administración 360 Spa{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 60px 20px;">
+    
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h1 style="color: var(--primary-dark); margin-bottom: 15px;">Comunidades que confían en nosotros</h1>
+        <p style="font-size: 1.1rem; color: #555;">Conoce los edificios y condominios que ya son parte de Administración 360.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+        
+        {% for comunidad in comunidades %}
+            <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0056b3; display: flex; flex-direction: column;">
+                <h3 style="margin-bottom: 10px; color: #333;">{{ comunidad.nombre }}</h3>
+                <p style="margin-bottom: 10px; color: #666;">
+                    <strong>📍 Dirección:</strong> {{ comunidad.direccion }}
+                </p>
+                {% if comunidad.rut %}
+                    <p style="margin-bottom: 10px; color: #666;">
+                        <strong>📄 RUT:</strong> {{ comunidad.rut }}
+                    </p>
+                {% endif %}
+                <p style="font-size: 0.9rem; color: #999; margin-top: 15px; margin-bottom: 25px;">
+                    Administrado desde: {{ comunidad.fecha_registro|date:"F Y" }}
+                </p>
+
+                <a href="{% url 'comunidad_detalle' comunidad.id %}" class="btn-primary" style="margin-top: auto; text-align: center; text-decoration: none; display: block; padding: 10px;">
+                    Ver detalles del edificio
+                </a>
+            </div>
+        {% empty %}
+            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: #f9f9f9; border-radius: 8px;">
+                <p style="color: #666; font-size: 1.1rem;">Aún no hay comunidades registradas en el sistema.</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nuestros Servicios | Administración 360 Spa{% endblock %}
+
+{% block content %}
+<div class="container" style="padding: 60px 20px;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h1 style="color: var(--primary-dark); margin-bottom: 15px;">Soluciones Integrales para tu Comunidad</h1>
+        <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
+            Nos enfocamos en la eficiencia operativa y la transparencia financiera para valorizar tu propiedad y mejorar la convivencia.
+        </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+        
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 5px solid #0056b3;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">📊</div>
+            <h3 style="color: #333; margin-bottom: 15px;">Gestión Financiera</h3>
+            <p style="color: #666; line-height: 1.6;">
+                Recaudación de gastos comunes, pago a proveedores y conciliaciones bancarias mensuales. Reportes de transparencia total disponibles para el comité.
+            </p>
+        </div>
+
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 5px solid #28a745;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">🔧</div>
+            <h3 style="color: #333; margin-bottom: 15px;">Mantenimiento Preventivo</h3>
+            <p style="color: #666; line-height: 1.6;">
+                Planes rigurosos de mantención para ascensores, bombas de agua, calderas y áreas comunes para evitar gastos de emergencia y multas.
+            </p>
+        </div>
+
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 5px solid #17a2b8;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">⚖️</div>
+            <h3 style="color: #333; margin-bottom: 15px;">Asesoría Legal</h3>
+            <p style="color: #666; line-height: 1.6;">
+                Cumplimiento estricto con la Ley de Copropiedad, apoyo en asambleas y gestión de cobranza judicial para reducir la morosidad.
+            </p>
+        </div>
+
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-bottom: 5px solid #ffc107;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">👥</div>
+            <h3 style="color: #333; margin-bottom: 15px;">Recursos Humanos</h3>
+            <p style="color: #666; line-height: 1.6;">
+                Administración de personal (conserjes y auxiliares), contratos, liquidaciones de sueldo y capacitaciones en seguridad.
+            </p>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 80px; padding: 50px; background: #0056b3; border-radius: 15px; color: white; text-align: center;">
+        <h2 style="margin-bottom: 20px;">¿Necesitas un presupuesto personalizado para tu edificio?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">Analizamos las necesidades específicas de tu comunidad sin compromiso.</p>
+        <a href="{% url 'contacto' %}" style="padding: 15px 40px; background: white; color: #0056b3; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: 0.3s;">
+            Contáctanos hoy mismo
+        </a>
+    </div>
+
+</div>
+{% endblock %}
