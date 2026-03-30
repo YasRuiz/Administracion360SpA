@@ -1,0 +1,1 @@
+web: python manage.py migrate && gunicorn admin360_project.wsgi
