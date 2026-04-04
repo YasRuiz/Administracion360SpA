@@ -15,18 +15,8 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="{% url 'home' %}" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
-                    <img src="{% static 'img/logo_360_claro.png' %}" alt="Logo Visión 360 claro" height="50" class="logo-claro">
-                    <img src="{% static 'img/logo_360_oscuro.png' %}" alt="Logo Visión 360 oscuro" height="50" class="logo-oscuro" style="display:none;">
-                            <style>
-                                @media (prefers-color-scheme: dark) {
-                                    .logo-claro { display: none !important; }
-                                    .logo-oscuro { display: inline !important; }
-                                }
-                                @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
-                                    .logo-claro { display: inline !important; }
-                                    .logo-oscuro { display: none !important; }
-                                }
-                            </style>
+                    <img src="{% static 'img/logo_360.png' %}" alt="Logo Visión 360" height="50">
+    
                     <div class="brand-text">
                         <span class="company-name">VISIÓN 360, GESTIÓN Y SERVICIOS SPA</span>
                         <span class="slogan">Gestión segura y transparente</span>
