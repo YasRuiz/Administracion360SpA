@@ -1,3 +1,4 @@
+
 from django.urls import path
 from . import views
 
@@ -9,4 +10,9 @@ urlpatterns = [
     path('comunidades/', views.comunidades, name='comunidades'), # Página de Comunidades
     # El <int:comunidad_id> atrapa el número en la URL y se lo pasa a la vista
     path('comunidades/<int:comunidad_id>/', views.comunidad_detalle, name='comunidad_detalle'),
+
+    # Nuevas páginas para Quienes Somos
+    path('vision/', views.vision, name='vision'),
+    path('mision/', views.mision, name='mision'),
+    path('valores/', views.valores, name='valores'),
 ]
