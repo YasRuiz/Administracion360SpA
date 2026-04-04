@@ -46,7 +46,14 @@
                         </div>
                     </li>
                     
-                    <li><a href="{% url 'comunidades' %}">Comunidades</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Quienes somos ▾</a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'vision' %}" target="_blank">Visión</a>
+                            <a href="{% url 'mision' %}" target="_blank">Misión</a>
+                            <a href="{% url 'valores' %}" target="_blank">Nuestros Valores</a>
+                        </div>
+                    </li>
                     
                     <li><a href="{% url 'contacto' %}" class="btn-contacto">Contacto</a></li>
                 </ul>
