@@ -1,13 +1,17 @@
 
 import os
 # Configuración de email para producción en Railway usando variables en español
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+INSTALLED_APPS = [
+    # ...existing code...
+    'anymail',
+]
+
+# Configuración de SendGrid con django-anymail
+EMAIL_BACKEND = 'anymail.backends.sendgrid.EmailBackend'
+ANYMAIL = {
+    'SENDGRID_API_KEY': os.environ.get('SENDGRID_API_KEY'),
+}
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 # Railway: Permitir el dominio público para CSRF
 CSRF_TRUSTED_ORIGINS = ['https://soothing-victory-production.up.railway.app']
 """

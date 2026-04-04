@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
-    <title>{% block title %}Administración 360 Spa{% endblock %}</title>
+    <title>{% block title %}Visión 360, gestión y servicios SpA{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -15,9 +15,20 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="{% url 'home' %}" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
-                    <img src="{% static 'img/logo_360.png' %}" alt="Logo" height="50">
+                    <img src="{% static 'img/logo_360_claro.png' %}" alt="Logo Visión 360 claro" height="50" class="logo-claro">
+                    <img src="{% static 'img/logo_360_oscuro.png' %}" alt="Logo Visión 360 oscuro" height="50" class="logo-oscuro" style="display:none;">
+                            <style>
+                                @media (prefers-color-scheme: dark) {
+                                    .logo-claro { display: none !important; }
+                                    .logo-oscuro { display: inline !important; }
+                                }
+                                @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+                                    .logo-claro { display: inline !important; }
+                                    .logo-oscuro { display: none !important; }
+                                }
+                            </style>
                     <div class="brand-text">
-                        <span class="company-name">ADMINISTRACIÓN 360 SPA</span>
+                        <span class="company-name">VISIÓN 360, GESTIÓN Y SERVICIOS SPA</span>
                         <span class="slogan">Gestión segura y transparente</span>
                     </div>
                 </a>
@@ -69,7 +80,7 @@
     <footer class="main-footer">
         <div class="container footer-content">
             <div style="margin-bottom: 10px;">
-                <strong>Administración 360 Spa</strong>
+                <strong>Visión 360, gestión y servicios SpA</strong>
             </div>
             <p>Gestión segura y transparente &copy; 2026</p>
         </div>

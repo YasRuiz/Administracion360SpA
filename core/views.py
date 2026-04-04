@@ -44,7 +44,7 @@ def contacto(request):
             # 3. Armar el asunto y el cuerpo del correo
             asunto_correo = f"Nuevo contacto web: {nombre}"
             cuerpo_correo = f"""
-            Has recibido un nuevo mensaje desde el sitio web de Administración 360 Spa.
+            Has recibido un nuevo mensaje desde el sitio web de Visión 360, gestión y servicios SpA.
             
             Detalles del prospecto:
             -----------------------
