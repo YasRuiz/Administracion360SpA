@@ -78,6 +78,32 @@
 
     <footer class="main-footer">
         <div class="container footer-content">
+
+    <script>
+    // Soporte para menús desplegables con clic (móviles y escritorio)
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.dropdown > .dropbtn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Cierra otros dropdowns
+                document.querySelectorAll('.dropdown-content').forEach(function(menu) {
+                    if (menu !== btn.nextElementSibling) menu.style.display = 'none';
+                });
+                // Alterna el menú actual
+                var content = btn.nextElementSibling;
+                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+        // Cierra el menú si se hace clic fuera
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-content').forEach(function(menu) {
+                    menu.style.display = 'none';
+                });
+            }
+        });
+    });
+    </script>
             <div style="margin-bottom: 10px;">
                 <strong>Visión 360, gestión y servicios SpA</strong>
             </div>
