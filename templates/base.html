@@ -38,21 +38,21 @@
                     <li><a href="{% url 'home' %}">Inicio</a></li>
                     
                     <li class="dropdown">
-                        <a href="{% url 'servicios' %}" class="dropbtn">Servicios ▾</a>
+                        <a href="{% url 'home' %}#servicios" class="dropbtn">Servicios ▾</a>
                         <div class="dropdown-content">
-                            <a href="#">Gestión Financiera</a>
-                            <a href="#">Mantenimiento</a>
-                            <a href="#">Asesoría Legal</a>
+                            <a href="{% url 'home' %}#financiera">Gestión Financiera</a>
+                            <a href="{% url 'home' %}#mantenimiento">Mantenimiento</a>
+                            <a href="{% url 'home' %}#legal">Asesoría Legal</a>
                         </div>
                     </li>
                     
 
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Quienes somos ▾</a>
+                        <a href="{% url 'home' %}#quienes-somos" class="dropbtn">Quienes somos ▾</a>
                         <div class="dropdown-content">
-                            <a href="#">Visión</a>
-                            <a href="#">Misión</a>
-                            <a href="#">Nuestros Valores</a>
+                            <a href="{% url 'home' %}#vision">Visión</a>
+                            <a href="{% url 'home' %}#mision">Misión</a>
+                            <a href="{% url 'home' %}#valores">Nuestros Valores</a>
                         </div>
                     </li>
                     

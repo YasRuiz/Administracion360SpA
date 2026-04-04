@@ -4,6 +4,42 @@
 {% block title %}Inicio | Visión 360, gestión y servicios SpA{% endblock %}
 
 {% block content %}
+
+<!-- Sección Quienes Somos -->
+<section id="quienes-somos" style="background: #f8f9fa; padding: 60px 0 30px 0;">
+    <div class="container" style="max-width: 900px;">
+        <h2 class="responsive-section-title" style="color: var(--primary-dark);">¿Quiénes somos?</h2>
+        <div id="vision" style="margin-bottom: 32px;">
+            <h3 style="color: #1976d2; margin-bottom: 10px;">Visión</h3>
+            <p style="font-size: 1.1rem;">Convertirnos en el referente líder de gestión inmobiliaria 360 en el mercado, siendo reconocidos por transformar la administración tradicional en un modelo de alta seguridad y transparencia. Aspiramos a que cada propiedad bajo nuestra custodia sea sinónimo de valor sostenido, cumplimiento normativo y confianza absoluta para propietarios y colaboradores.</p>
+        </div>
+        <div id="mision" style="margin-bottom: 32px;">
+            <h3 style="color: #1976d2; margin-bottom: 10px;">Misión</h3>
+            <p style="font-size: 1.1rem;">Nuestra misión es entregar una gestión integral de excelencia en la administración de activos inmobiliarios y comunidades, fusionando el rigor de la auditoría financiera con la precisión de la ingeniería en prevención de riesgos. Nos dedicamos a proteger el patrimonio de nuestros clientes, garantizando entornos seguros, transparentes y operativos que mejoren la calidad de vida y la eficiencia de los espacios que gestionamos.</p>
+        </div>
+        <div id="valores">
+            <h3 style="color: #1976d2; margin-bottom: 10px;">Nuestros Valores</h3>
+            <ul style="list-style: none; padding: 0; font-size: 1.05rem;">
+                <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="font-size: 1.5rem; color: #1976d2;">&#128274;</span>
+                    <div><strong>Integridad y Ética:</strong> Actuamos con total transparencia en la gestión de recursos, aplicando procesos de auditoría rigurosos para asegurar la probidad en cada cuenta.</div>
+                </li>
+                <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="font-size: 1.5rem; color: #1976d2;">&#9888;&#65039;</span>
+                    <div><strong>Cultura Preventiva:</strong> No esperamos a que los problemas ocurran; anticipamos riesgos técnicos, legales y financieros para proteger el activo y a las personas.</div>
+                </li>
+                <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="font-size: 1.5rem; color: #1976d2;">&#128200;</span>
+                    <div><strong>Compromiso con la Plusvalía:</strong> Gestionamos cada propiedad con visión de futuro, asegurando que el mantenimiento y la administración técnica preserven el valor comercial del inmueble en el tiempo.</div>
+                </li>
+                <li style="margin-bottom: 18px; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="font-size: 1.5rem; color: #1976d2;">&#128295;</span>
+                    <div><strong>Excelencia Resolutiva:</strong> Combinamos el conocimiento técnico con una vocación de servicio ágil, entregando soluciones concretas a los desafíos diarios de cualquier comunidad o infraestructura.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 <section class="hero-section">
     <div class="container">
         <div class="hero-text">
@@ -38,24 +74,25 @@
     </div>
 </section>
 
-<section class="features-section">
+<!-- Sección Servicios -->
+<section id="servicios" class="features-section">
     <div class="container">
             <h2 class="responsive-section-title" style="color: var(--primary-dark);">¿Por qué elegirnos?</h2>
         <div class="features-grid">
-            <div class="feature-card">
+            <div id="financiera" class="feature-card">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🏦</div>
-                <h3>Transparencia Financiera</h3>
+                <h3>Gestión Financiera</h3>
                 <p>Reportes claros y accesibles sobre los gastos comunes y fondos de reserva. Cada peso cuenta y es auditado.</p>
             </div>
-            <div class="feature-card">
+            <div id="mantenimiento" class="feature-card">
                 <div style="font-size: 2.5rem; margin-bottom: 15px;">🛠️</div>
                 <h3>Mantenimiento Preventivo</h3>
                 <p>Cuidamos la plusvalía de su edificio con planes de mantención rigurosos y proveedores certificados.</p>
             </div>
-            <div class="feature-card">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">📞</div>
-                <h3>Atención 24/7</h3>
-                <p>Canales de comunicación directos para emergencias y requerimientos diarios. Siempre estamos para ti.</p>
+            <div id="legal" class="feature-card">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">⚖️</div>
+                <h3>Asesoría Legal</h3>
+                <p>Cumplimiento estricto con la Ley de Copropiedad, apoyo en asambleas y gestión de cobranza judicial para reducir la morosidad.</p>
             </div>
         </div>
     </div>
