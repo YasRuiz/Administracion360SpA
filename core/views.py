@@ -86,3 +86,13 @@ def comunidad_detalle(request, comunidad_id):
     # Buscamos el edificio por su ID
     comunidad_especifica = get_object_or_404(Comunidad, id=comunidad_id)
     return render(request, 'pages/comunidad_detalle.html', {'comunidad': comunidad_especifica})
+
+    # Vistas para Quienes Somos
+    def vision(request):
+        return render(request, 'pages/vision.html')
+
+    def mision(request):
+        return render(request, 'pages/mision.html')
+
+    def valores(request):
+        return render(request, 'pages/valores.html')
