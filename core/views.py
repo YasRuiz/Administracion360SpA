@@ -88,11 +88,11 @@ def comunidad_detalle(request, comunidad_id):
     return render(request, 'pages/comunidad_detalle.html', {'comunidad': comunidad_especifica})
 
     # Vistas para Quienes Somos
-    def vision(request):
-        return render(request, 'pages/vision.html')
+def vision(request):
+    return render(request, 'pages/vision.html')
 
-    def mision(request):
-        return render(request, 'pages/mision.html')
+def mision(request):
+    return render(request, 'pages/mision.html')
 
-    def valores(request):
-        return render(request, 'pages/valores.html')
+def valores(request):
+    return render(request, 'pages/valores.html')
